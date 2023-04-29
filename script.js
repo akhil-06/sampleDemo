@@ -82,3 +82,70 @@ async function getdata(){
 }
 
 getdata();
+
+
+
+
+
+// Session on Objects
+
+
+
+//object
+
+let student = {
+    name:"Akhil",
+    rollNo:10,
+    marks:100,
+    1:"web sessions"
+};
+// console.log(student.rollNo);
+student.name = "qwerty";
+// console.log(student.semester);
+student.semester = 6;
+// console.log(student);
+// console.log(student["rollNo"]);
+// console.log(student.1);
+// console.log(student[name]);
+// delete student.name;
+delete student[1];
+// console.log(student);
+
+// for(var prop in student){
+//     console.log(prop);
+// }
+
+// var keys = Object.keys(student)
+// console.log(keys);
+
+// var key = Object.getOwnPropertyNames(student);
+// console.log(key);
+
+
+
+// nested objects
+
+var student1 = {
+    name:'abc',
+    rolno:20,
+    marks:100,
+    semester:6,
+    address:{
+        city:'delhi',
+        pincode:127111,
+        state:'delhi',
+        country:'india',
+        asia:{
+            country:'india',
+            continent:"asia"
+        }
+    }
+}
+
+// console.log(student1.address.asia.continent);
+// console.log(student1["address"]["state"]);
+// console.log(student1);
+console.log(Object.values(student1));
+// for(let prop in student1){
+//     console.log(prop);
+// }
