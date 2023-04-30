@@ -149,3 +149,96 @@ console.log(Object.values(student1));
 // for(let prop in student1){
 //     console.log(prop);
 // }
+
+
+
+//OOPS continued
+// var demo2 = function(){
+//     console.log(this);
+// }
+// function demo(){
+//     console.log(this);
+// }
+// console.log(this);
+// demo2()
+// demo()
+
+// 'use strict'
+// function demo(){
+//     console.log(this);
+// }
+// demo()
+// var obj = {
+//     'prop1':12,
+//     'prop2':function(){
+//         console.log(this);
+//     }
+// }
+
+// obj.prop2();
+
+
+// var student = {
+//     name:"abc",
+//     marks:80,
+//     rollno:90
+// }
+
+
+
+// function Student(name,rollno,makrs){
+//     // console.log(this);
+//     this.name= name;
+//     this.rollno = rollno
+//     this.makrs = makrs
+//     // this.getMarks = function(){
+//     //     console.log(this.makrs);
+//     // }
+// }
+
+// var student1 = new Student("abc",30,40)
+// var student2 = new Student("ska",30,40)
+// // console.log(student1);
+// student1.getMarks()
+// console.log(student2);
+
+
+'use strict'
+function Student(name,rollno,makrs){
+        // console.log(this);
+        this.name= name;
+        this.rollno = rollno
+        this.makrs = makrs
+        this.getMarks = function(){
+            console.log(this.makrs);
+        }
+    }
+    
+    var student1 = new Student("abc",30,40)
+    var student2 = new Student("ska",30,40)
+    // console.log(student1);
+    student1.getMarks()
+    console.log(student2);
+
+    // company employee atleast 6 properties
+    //2 methods
+
+    let x1 = new String()
+
+    let x2 = new Number()
+
+    let x3 = new Boolean()
+    x3 = true;
+    
+    let x4 = new Object()
+
+    let x5 = new Array()
+    x5 = []
+
+    let x6 = new RegExp()
+
+    let x7 = new Function()
+
+    let x8 = new Date()
+
+    
