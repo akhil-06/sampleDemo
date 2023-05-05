@@ -242,3 +242,111 @@ function Student(name,rollno,makrs){
     let x8 = new Date()
 
     
+    
+    
+    
+//    Objects and Clases
+    // // console.log("hello");
+
+// // object vs Object
+
+// function Vechile(wheel, price){
+//     this.price = price
+//     this.wheel = wheel;
+// }
+
+// Vechile.prototype.getPrice = function(){
+//     return this.price;
+// }
+
+// var v1 = new Vechile(2,5000);
+// var v2 = new Vechile(4,1000);
+// var v3 = new Vechile(10,100);
+
+// v3.capacity;
+
+// // v1 -> prototype -> Object
+
+// Class
+
+
+
+
+
+
+
+// Object.getPrototypeOf(v1) === Vechile.prototype
+
+
+// var v1 = Vechile(2,100);
+// function Vechile(price,wheel){
+//     var vechile = {}
+//     vechile.price = price
+//     vechile.wheel = wheel
+//     return vechile;
+// }
+// var v1 = Vechile(2,100);
+
+
+
+
+// var a = function(){
+//     console.log("hello");
+// }
+// a()
+
+
+
+// var Vechile = class{
+//     constructor(wheel,price){
+//         this.wheel = wheel
+//         this.price = price
+//     }
+//     getprice(){
+//         console.log(this.price);
+//     }
+//     getWheel(){
+//         console.log(this.wheel);
+//     }
+// }
+
+// var v1 = new Vechile(4,2000);
+// var v2 = new Vechile(10,500);
+
+// Inheritance
+class Vechile{
+    constructor(wheel,price){
+        this.wheel = wheel
+        this.price = price
+    }
+    getprice(){
+        console.log(this.price);
+    }
+    getWheel(){
+        console.log(this.wheel);
+    }
+    printDescription(){
+        console.log("Vechile", this.wheel, this.price);
+    }
+}
+
+class Car extends Vechile{
+    constructor(doors, price){
+        super(4,price)
+        this.doors = doors
+    }
+    printDescription(){
+        super.getWheel()
+        console.log("Car", this.doors);
+    }
+}
+
+var c1 = new Car(5,200000);
+var c2 = new Car(5,2);
+var c3 = new Car(5,20);
+
+
+
+
+
+    
