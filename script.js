@@ -367,3 +367,96 @@ inner();
 inner();
 
     
+
+
+
+// function validateForm() {
+//   var name = document.forms["RegForm"]["Name"];
+//   var email = document.forms["RegForm"]["EMail"];
+//   var password = document.forms["RegForm"]["Password"];
+//   var confirmPassword = document.forms["RegForm"]["Confirm"];
+
+//   if (name.value == "") {
+//     window.alert("Please enter your name.");
+//     name.focus();
+//     return false;
+//   }
+
+//   if (email.value == "") {
+//     window.alert("Please enter a valid e-mail address.");
+//     email.focus();
+//     return false;
+//   }
+
+//   if (password.value == "") {
+//     window.alert("Please enter your password");
+//     password.focus();
+//     return false;
+//   }
+
+//   if (confirmPassword.value == "") {
+//     window.alert("Please enter your password");
+//     password.focus();
+//     return false;
+//   }
+
+//   if (password.value === confirmPassword.value) {
+//     if (storedInLS()) {
+//       window.alert("Registration is done successfully!!!");
+//       return true;
+//     }
+//   } else {
+//     window.alert("Password and confirm password should be same");
+//     return false;
+//   }
+
+//   return true;
+// }
+
+// var users = JSON.parse(localStorage.getItem("userInLS")) ? JSON.parse(localStorage.getItem("userInLS")):[];
+// console.log(users);
+// function storedInLS() {
+//   var name = document.forms["RegForm"]["Name"].value;
+//   var email = document.forms["RegForm"]["EMail"].value;
+//   var password = document.forms["RegForm"]["Password"].value;
+//   var confirmPassword = document.forms["RegForm"]["Confirm"].value;
+
+//   var userData = {
+//     id:Number(new Date),
+//     "name": name,
+//     "email": email,
+//     "password": password,
+//     "confirmPassword": confirmPassword,
+//   };
+//   console.log(JSON.stringify(userData));
+
+//   console.log(userData);
+//   users.push(userData);
+
+//   var userString = JSON.stringify(users);
+//   localStorage.setItem("userInLS", userString);
+// }
+
+
+
+
+
+let innerObj = {
+    name:"Ak",
+    age:30,
+    address:{
+        street:"123 pal ghar",
+        city:"Delhi",
+        state:"Haryana"
+    }
+};
+
+let outerObj = {};
+innerObj.address.name = innerObj.name;
+delete innerObj.name;
+
+// console.log(outerObj);
+console.log(innerObj);
+console.log(innerObj.address);
+
+
